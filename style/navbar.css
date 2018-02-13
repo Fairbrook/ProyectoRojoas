@@ -1,0 +1,188 @@
+:root{
+	--fondo: #373636;
+	--fondo2: #B5B4B4;
+	--letras: white;
+	--subtitulos: #79AAB1;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+/*Estilos de listas desordenadas*/
+ul{
+	list-style: none;
+}
+
+/*Estilos de la barra general*/
+nav{
+	display: flex;
+	background: var(--fondo);
+	box-shadow: 0px 2px 4px black;
+	padding-left: 10px;
+}
+
+/*Estilos de los elementos de la lista*/
+nav li{
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/*Estilos de los links*/
+nav li>a{
+	padding: 5px;
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: var(--letras);
+	font-size: 1.5em;
+}
+nav li a:hover{
+	text-decoration: underline;
+}
+
+/*Estilos de los links en submenú*/
+nav li .sub li a{
+	display: block;
+}
+
+/*Estilo de los submenu*/
+nav li >.sub{
+	display: none;
+	padding: 10PX;
+	padding-top: 0px;
+	position: absolute;
+	background: var(--fondo);
+	box-shadow: 1px 2px 4px black;
+	top: 100%;
+	min-width: 200%;
+	z-index: 2;
+}
+
+nav li:hover .sub{
+	display: block;
+}
+nav li .sub:hover{
+	display: block;
+}
+
+/*Estilos de la lista descriptiva*/
+nav dl{
+	padding-top: 10px;
+	display: block;
+}
+nav dd{
+	background: var(--fondo2);
+	padding: 3px;
+}
+nav dt{
+	color: var(--subtitulos);
+	font-size: 2em;
+}
+
+/*Estilo titulo de la navbar*/
+.nav-header{
+	display: flex;
+	align-items: center;
+	font-size: 3em;
+	margin-right: 20px;
+}
+.nav-header a{
+	font-size: 1em;
+}
+
+/*Estilo del menu (lsita de opciones)*/
+#menu{
+	display: flex;
+	align-items: center;
+}
+#menu li{
+	margin-right: 20px;
+}
+
+/*Estilo del boton desplegable*/
+#nav-button{
+	width: 20px;
+	height: 20px;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	margin: 5px;
+}
+#nav-button span{
+	width: 18px;
+	height: 3px;
+	background: white;
+	position: relative;
+}
+#nav-button span:after, #nav-button span:before{
+	content: '';
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 18px;
+	height: 3px;
+	background: white;
+	position: relative;
+}
+#nav-button span:after{
+	top: 2px;
+}
+#nav-button span:before{
+	top: -5px;
+}
+
+@media screen and (max-width: 1197px){
+	.sub{
+		left: -200%;
+	}
+}
+@media screen and (max-width: 1000px){
+	#menu{
+		flex-wrap: wrap;
+	}
+	nav li{
+		display: block;
+		height: auto;
+	}
+}
+@media screen and (max-width: 550px){
+	#menu{
+		flex-flow: column;
+		display: none;
+		width: 30%;
+		background: var(--fondo);
+	}
+	.nav-header{
+		text-align: center;
+		justify-content: center;
+		background: var(--fondo);
+		box-shadow: 0px 1px 2px black;
+		margin: 0;
+	}
+	nav li >.sub{
+		left: 100%;
+		min-width: 70%;
+		min-width: 0px;
+		top: 0%;
+	}
+	#menu li{
+		margin: 0;
+	}
+	#nav-button{
+		display: flex;
+	}
+	.sub{
+		left: 100%;
+	}
+	nav{
+	background-color: var(--letras);
+	flex-flow: column;
+	padding: 0;
+	box-shadow: 0 0 0;
+	}
+}

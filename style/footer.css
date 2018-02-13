@@ -1,0 +1,23 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+footer{
+	background: var(--fondo);
+	display: flex;
+}
+footer li a{
+	text-decoration: none;
+	color: var(--letras);
+}
+footer a:hover{
+	text-decoration: underline;
+}
+footer li{
+	margin: 10px;
+}
+footer ul{
+	list-style-type: none;
+	display: flex;
+}
