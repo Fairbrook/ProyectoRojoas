@@ -6,25 +6,22 @@
 	margin: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-gap: 10px;
+	display: flex;
+	flex-wrap: wrap;
 	width: 80%;
+	text-align: center;
+	justify-content: center;
 }
 .grid  article{
 	z-index: 3;
 	margin-bottom: 25%;
+	margin-right: 25%;
 	box-shadow: 2px 1px 4px var(--fondo), -1px -.5px 10px var(--fondo);
 	width: 266px;
-	max-width: 70%;
 	padding-top: 5px;
 }
 .grid article:hover{
-	-webkit-transform: scale(1.1,1.1);
-	   -moz-transform: scale(1.1,1.1);
-	    -ms-transform: scale(1.1,1.1);
-	     -o-transform: scale(1.1,1.1);
-	        transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
 }
 .grid  article .img{
 	max-width: 100%;
@@ -42,11 +39,7 @@
 	font-size: 1em;
 }
 .grid article button:hover{
-	-webkit-transform: scale(1.2,1.2);
-	   -moz-transform: scale(1.2,1.2);
-	    -ms-transform: scale(1.2,1.2);
-	     -o-transform: scale(1.2,1.2);
-	        transform: scale(1.2,1.2);
+	transform: scale(1.2,1.2);
 }
 .grid article .info{
 	position: absolute;
@@ -62,4 +55,15 @@
 }
 .grid .precio a{
 	font-size: 2em;
+}
+
+@media screen and (max-width: 700px){
+	.grid{
+		flex-flow: column;
+		align-items: center;
+	}
+	.grid article{
+		margin-right: 0%;
+	}
+
 }
