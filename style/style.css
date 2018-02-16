@@ -1,0 +1,18 @@
+:root{
+	--fondo: #c5d5cb;
+	--fondo2: #DBE8E0;
+	--letras: #545C57;
+	--letras-botones: #2F3230;
+	--boton: #9fa8a3;
+	--subtitulos: #79AAB1;
+	--sombras: #9fa8a3;
+	--hover-option: #DBE8E0;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	position: absolute;
+}

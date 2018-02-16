@@ -1,11 +1,7 @@
-
-*{
-	padding: 0;
-	margin: 0;
-}
 footer{
 	background: var(--fondo);
 	display: flex;
+	bottom: 0;
 }
 footer li a{
 	text-decoration: none;
