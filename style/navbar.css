@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+#brand{
+	background: var(--fondo);
+	display: flex;
+	justify-content: center;
+}
+#brand h1{
+	margin-left: 10px;
+	text-align: center;
+	font-size: 3.5em;
+	font-family: 'Fjalla One', sans-serif;
+	color: var(--brand);
+}
+
 /*Estilos de listas desordenadas*/
 ul{
 	list-style: none;
@@ -7,7 +24,6 @@ ul{
 nav{
 	display: flex;
 	background: var(--fondo);
-	box-shadow: 0px 2px 4px var(--sombras);
 	padding-left: 10px;
 }
 
@@ -21,7 +37,7 @@ nav li{
 
 /*Estilos de los links*/
 nav li>a{
-	padding: 5px;
+	padding: 15px;
 	display: inline-block;
 	margin-right: 20px;
 }
@@ -48,10 +64,9 @@ nav li >.sub{
 	padding-top: 0px;
 	position: absolute;
 	background: var(--fondo2);
-	box-shadow: 1px 2px 4px var(--sombras);
 	top: 100%;
 	min-width: 200%;
-	z-index: 3;
+	z-index: 2;
 }
 
 nav li:hover .sub{
@@ -81,31 +96,46 @@ nav dt{
 	align-items: center;
 	font-size: 3em;
 	margin-right: 20px;
+
 }
 .nav-header a{
-	font-size: .5em;
+	font-size: .75em;
 }
 
 /*Estilo del menu (lsita de opciones)*/
 #menu{
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	font-family: 'Oswald', sans-serif;
+	width: 100%;
+}
+
+#menu .izquierda{
+	display: flex;
+	width: 80%;
+	flex-wrap: wrap;
+}
+
+#menu .derecha{
+	display: flex;
 }
 
 /*Estilo del boton desplegable*/
 #nav-button{
 	width: 20px;
-	height: 20px;
+	height: 30px;
 	align-items: center;
 	justify-content: center;
 	display: none;
 	margin: 5px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 #nav-button span{
-	width: 18px;
-	height: 3px;
-	background: white;
+	width: 20px;
+	height: 4px;
+	background: var(--brand);
 	position: relative;
 }
 #nav-button span:after, #nav-button span:before{
@@ -113,15 +143,13 @@ nav dt{
 	position: absolute;
 	display: block;
 	left: 0;
-	width: 18px;
-	height: 3px;
-	background: white;
+	width: 20px;
+	height: 4px;
+	background: var(--brand);
 	position: relative;
 }
-#nav-button span:after{top: 2px;}
-#nav-button span:before{
-	top: -5px;
-}
+#nav-button span:after{top: 5px;}
+#nav-button span:before{top: -9.5px;}
 
 
 @media screen and (max-width: 1000px){
@@ -133,15 +161,23 @@ nav dt{
 		height: auto;
 	}
 }
-@media screen and (max-width: 550px){
+
+@media screen and (max-width: 956px){
+	#menu .izquierda{width: auto;}
+}
+
+@media screen and (max-width: 665px){
 	#menu{
 		flex-flow: column;
 		display: none;
 		box-shadow: none;
 	}
+	#menu .izquierda{
+		flex-flow: column;
+	}
 	.nav-header{
 		text-align: center;
-		justify-content: center;
+		justify-content: left;
 		background: var(--fondo);
 		margin: 0;
 		font-size: 5em;
@@ -149,6 +185,7 @@ nav dt{
 	nav li >.sub{
 		position: relative;
 		box-shadow: none;
+		top: 0;
 	}
 	#menu li{
 		margin: 0;

@@ -1,12 +1,13 @@
 :root{
-	--fondo: #c5d5cb;
-	--fondo2: #DBE8E0;
-	--letras: #545C57;
-	--letras-botones: #2F3230;
+	--fondo: #1E1E1E;
+	--fondo2: #696C69;
+	--letras: #ABADAC;
+	--letras-botones: #ABADAC;
 	--boton: #9fa8a3;
 	--subtitulos: #79AAB1;
-	--sombras: #9fa8a3;
-	--hover-option: #DBE8E0;
+	--sombras: #696C69;
+	--hover-option: #696C69;
+	--brand: #ABADAC;
 }
 
 *{
@@ -15,4 +16,6 @@
 }
 body{
 	position: absolute;
+	width: 100%;
+	font-size: 16px;
 }

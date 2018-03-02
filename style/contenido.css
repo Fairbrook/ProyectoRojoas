@@ -1,31 +1,32 @@
+@import "footer.css";
+@import "navbar.css";
+@import "style.css";
+@import "carrusel.css";
 .grid{
 	margin: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
 	flex-wrap: wrap;
-	width: 80%;
 	text-align: center;
 	justify-content: center;
 }
 .grid  article{
 	z-index: 2;
-	margin-bottom: 20px;
-	margin-left: 8%;
+	margin: 20px;
 	box-shadow: 2px 1px 4px var(--sombras), -1px -.5px 10px var(--sombras);
 	padding-top: 5px;
-	width: 260px;
+	border-radius: 100%;
+	overflow: hidden;
 }
 .grid article:hover{
 	transform: scale(1.1,1.1);
 }
 .grid  article .img{
 	max-width: 100%;
-	text-align: right;
 }
 .grid article .img img{
 	max-height: 200px;
-	right: 5px;
 }
 .grid article button{
 	background: var(--boton);
@@ -54,54 +55,15 @@
 .carrusel-img{
 	text-align: center;
 	margin: auto;
-	margin-top: 30px;
 	position: relative;
 	display: flex;
-}
-.carrusel-img img{
-	display: none;
-	height: 350px;
-	position: absolute;
-}
-.carrusel-img .active{
-	position: relative;
-}
-.carrusel{
-	display: flex;
-}
-
-.carrusel-boton{
-	cursor: pointer;
-	font-size: 2.5em;
-	color: var(--fondo);
-}
-
-.carrusel-control{
-	display: inline-grid;
-	align-items: center;
 	width: 100%;
-}
-.carrusel .carrusel-control:first-child{
-	justify-content: right;
-	margin-right: 20px;
-}
-.carrusel .carrusel-control:last-child{
-	justify-content: left;
-	margin-left: 20px;
 }
 
 @media screen and (max-width: 820px){
-	.carrusel{
-		width: 100%;
-	}
-	.carrusel img{
-		width: 100%;
-	}
-	.carrusel-control{
-		display: none;
-	}
 	.grid article:hover{transform: scale(1,1);}
 }
+
 
 @media screen and (max-width: 700px){
 	.grid{

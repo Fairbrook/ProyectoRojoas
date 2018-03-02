@@ -1,7 +1,14 @@
+@import "style.css";
 footer{
 	background: var(--fondo);
 	display: flex;
+	align-items: center;
 	bottom: 0;
+	color: var(--letras);
+}
+footer ul{
+	display: flex;
+	align-items: center;
 }
 footer li a{
 	text-decoration: none;
