@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario de Registro SCIII</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<div class="group">
+  <form action="registro.php" method="POST">
+  <h2><em>Formulario de Registro</em></h2>
+  
+     
+      <label for="nombres">Nombres <span><em>(requerido)</em></span></label>
+      <input type="text" name="nombres" class="form-input" required/>   
+      
+      <label for="apellido_p">Apellido Paterno <span><em>(requerido)</em></span></label>
+      <input type="text" name="apellido_p" class="form-input" required/>       
+      
+      <label for="apellido_ma">Apellido  Materno<span><em>(requerido)</em></span></label>
+      <input type="text" name="apellido_ma" class="form-input" required/>             
+      
+
+      <label for="direccion">Direccion <span><em>(requerido)</em></span></label>
+      <input type="text" name="direccion" class="form-input" required/>          
+      
+      <label for="email">Email <span><em>(requerido)</em></span></label>
+      <input type="email" name="email" class="form-input" />
+      
+      <label for="password">Contraseña <span><em>(requerido)</em></span></label>
+      <input type="text" name="password" class="form-input" required/>             
+               
+      
+     <center> <input class="form-btn" name="submit" type="submit" value="Suscribirse" /></center>
+    </p>
+  </form>
+</div>
+</body>
+</html>

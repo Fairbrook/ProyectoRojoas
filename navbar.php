@@ -54,6 +54,9 @@
 			<li>
 				<a href="contacto.php">Contactenos</a>
 			</li>
+			<li>
+				<a href="reg.html">Registro</a>
+			</li>
 		</div>
 	</ul>
 </nav>
