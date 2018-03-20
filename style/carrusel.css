@@ -1,16 +1,17 @@
 .carrusel-img img{
 	display: none;
 	position: absolute;
+	height: 100%;
 	width: 100%;
-	height: 500px;
+	object-fit: cover;
 }
 .carrusel-img .active{
-	position: relative;
+	display: block;
 }
 .carrusel{
 	display: flex;
 	position: relative;
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	overflow: hidden;
 }
@@ -35,17 +36,10 @@
 	right: 0;
 }
 
-@media screen and (max-width: 820px){
-	.carrusel{
-		width: 100%;
-	}
-	.carrusel img{
-		width: 100%;
-	}
+.carrusel-img{
+	text-align: center;
+	position: relative;
+	display: flex;
+	width: 100%;
 }
 
-@media screen and (max-width: 768px){
-	.carrusel{
-		height: auto;
-	}
-}

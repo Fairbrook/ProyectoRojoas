@@ -1,43 +1,26 @@
 <?php
 
- $host_db = "localhost";
- $user_db = "Kevin_ceti";
- $pass_db = "Kevin_ceti";
- $db_name = "proyecto_rojoas";
- $tbl_name = "usuarios";
+$conexion = require_once "Config/database.php";
+$buscarUsuario = "SELECT * FROM $tbl_name WHERE correo = '$_POST[email]' ";
+$result = $conexion->query($buscarUsuario);
+$count = mysqli_num_rows($result);
 
-
- $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
-
- if ($conexion->connect_error) {
- die("La conexion falló: " . $conexion->connect_error);
+if ($count == 1) {
+	header('Location: Fail.php');
 }
+else{
+	$query = "INSERT INTO usuarios (nombres,apellido_p,apellido_m,direccion,correo, contrasena)
+	VALUES ('$_POST[nombres]','$_POST[apellido_p]','$_POST[apellido_ma]','$_POST[direccion]','$_POST[email]', '$_POST[password]')";
 
- $buscarUsuario = "SELECT * FROM $tbl_name
- WHERE correo = '$_POST[email]' ";
+	if ($conexion->query($query) === TRUE) {
 
- $result = $conexion->query($buscarUsuario);
+		header('Location: tarjeta.php');
+	}
 
- $count = mysqli_num_rows($result);
+	else {
+		echo "Error al crear el usuario." . $query . "<br>" . $conexion->error; 
+	}
+}
+mysqli_close($conexion);
 
- if ($count == 1) {
-
-
-header('Location: Fail.html');
- }
- else{
-
- $query = "INSERT INTO usuarios (nombres,apellido_p,apellido_m,direccion,correo, contrasena)
-           VALUES ('$_POST[nombres]','$_POST[apellido_p]','$_POST[apellido_ma]','$_POST[direccion]','$_POST[email]', '$_POST[password]')";
-
- if ($conexion->query($query) === TRUE) {
- 
-header('Location: Success.html');
- }
-
- else {
- echo "Error al crear el usuario." . $query . "<br>" . $conexion->error; 
-   }
- }
- mysqli_close($conexion);
 ?>

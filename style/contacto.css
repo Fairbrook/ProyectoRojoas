@@ -49,6 +49,7 @@ form .tag{
 	width: 300px;
 	display: block;
 	color: var(--letras-botones);
+	cursor: pointer;
 }
 @media screen and (max-width: 1100px){
 	form{

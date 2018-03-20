@@ -113,7 +113,6 @@ nav dt{
 
 #menu .izquierda{
 	display: flex;
-	width: 80%;
 	flex-wrap: wrap;
 }
 
@@ -166,7 +165,7 @@ nav dt{
 	#menu .izquierda{width: auto;}
 }
 
-@media screen and (max-width: 665px){
+@media screen and (max-width: 790px){
 	#menu{
 		flex-flow: column;
 		display: none;

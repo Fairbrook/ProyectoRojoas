@@ -55,7 +55,7 @@
 				<a href="contacto.php">Contactenos</a>
 			</li>
 			<li>
-				<a href="reg.html">Registro</a>
+				<a href="reg.php">Registro</a>
 			</li>
 		</div>
 	</ul>

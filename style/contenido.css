@@ -52,13 +52,6 @@
 	color: black;
 }
 
-.carrusel-img{
-	text-align: center;
-	margin: auto;
-	position: relative;
-	display: flex;
-	width: 100%;
-}
 
 @media screen and (max-width: 820px){
 	.grid article:hover{transform: scale(1,1);}
