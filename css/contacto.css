@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-@import "footer.css";
-@import "navbar.css";
-@import "style.css";
+
 form{
 	display: grid;
 	grid-template-columns: auto auto;

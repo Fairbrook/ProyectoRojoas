@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Ropa el Carlos</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, 	initial-scale=1.0">
-	<link rel="stylesheet" href="./style/contenido.css">
-	<script src="./js/jquery-3.2.1.js"></script>
-	<script src="./js/carusel.js"></script>
-	<script src="./js/navbar.js"></script>
-	<script src="./font-awesome/js/fontawesome-all.min.js"></script>
-</head>
-<body>
-<?php
-	require_once "navbar.php";
-	require_once "contenido.php";
-	require_once "footer.php";?>
-</body>
-</html>
+<?php 
+	require_once "Config/config.php";
+	require_once "Config/autoload.php";
+
+	define('ROOT', realpath(dirname(__FILE__)) . DS);
+
+	$directorio = str_replace("index.php", "", $_SERVER['PHP_SELF']);
+	$directorio = str_replace("/", DS, $directorio);
+	$ruta = "http:".DS.DS.$_SERVER['HTTP_HOST'].$directorio;
+	
+	define('URL', $ruta);
+	define('CSS', $ruta."css".DS);
+	define('JS', $ruta."js".DS);
+	define('IMG', $ruta."img".DS);
+	define('VIEW', $ruta."Views".DS);
+
+	Config\autoload::load();
+
+	require_once "Views/template/template.php";
+	Config\enrutador::run(new Config\request());
+ ?>

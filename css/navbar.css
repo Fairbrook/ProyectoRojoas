@@ -24,7 +24,6 @@ ul{
 nav{
 	display: flex;
 	background: var(--fondo);
-	padding-left: 10px;
 }
 
 /*Estilos de los elementos de la lista*/

@@ -1,11 +1,5 @@
-@import "footer.css";
-@import "navbar.css";
-@import "style.css";
-@import "carrusel.css";
 .grid{
-	margin: 20px;
-	margin-left: auto;
-	margin-right: auto;
+	padding: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;

@@ -1,10 +1,12 @@
-@import "style.css";
 footer{
 	background: var(--fondo);
 	display: flex;
 	align-items: center;
 	bottom: 0;
 	color: var(--letras);
+	width: 100%;
+	position: absolute;
+	height: 50px;
 }
 footer ul{
 	display: flex;
