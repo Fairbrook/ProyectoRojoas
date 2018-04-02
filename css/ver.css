@@ -1,0 +1,25 @@
+.producto-ver{
+	display: flex;
+
+	padding: 20px;
+}
+
+.producto-ver .attrib{
+	text-align: left;
+	width: 100%;
+	padding-left: 30px;
+
+	display: grid;
+	grid-template-rows: auto 40% auto;
+}
+
+.producto-ver .attrib .desc{
+	font-size: 1.5em;
+}
+
+.producto-ver .attrib .nombre{
+	font-size: 3em;
+	color: var(--fondo);
+
+}
+

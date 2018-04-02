@@ -27,5 +27,16 @@
 		public function categoria($id){
 			echo $id;
 		}
+
+		public function ver($id){
+			$productos = new producto();
+			$productos->set("id", $id);
+
+			if($productos->read()){
+				$this->view("productos",array(
+				"producto" => $productos
+				), "ver");
+			}else $this->view("error");
+		}
 	}
  ?>

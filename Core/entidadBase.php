@@ -43,8 +43,8 @@
 		}
 
 		public function getById($id){
-			$query = $this->db->query("SELECT * FROM {$this->table} WHERE $id = {$id}");
-
+			$query = $this->db->query("SELECT * FROM {$this->table} WHERE id = {$id}");
+			
 			if(!$this->db->errno)
 				return $query->fetch_object();
 			else 

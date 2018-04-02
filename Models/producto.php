@@ -14,8 +14,14 @@
 		public function getId(){
 			return $this->id;
 		}
-		public function get($atributo){return $this->atributo;}
-		public function set($atributo,$value){$this->atributo = $value;}
+
+		public function get($atributo){
+			return $this->{$atributo};
+		}
+
+		public function set($atributo,$value){
+			$this->{$atributo} = $value;
+		}
 
 		public function save(){
 			if(!$this->id)$this->id=$this->getNextId();
@@ -37,12 +43,15 @@
 
 		public function read(){
 			$read = $this->getById($this->id);
-			$this->nombre = $read->nombre;
-			$this->cantidad = $read->cantidad;
-			$this->precio = $read->precio;
-			$this->descripcion = $read->descripcion;
-			$this->imagen = $read->imagen;
-			$this->id_categoria = $read->id_categoria;
+			if($read){
+				$this->nombre = $read->nombre;
+				$this->cantidad = $read->cantidad;
+				$this->precio = $read->precio;
+				$this->descripcion = $read->descripcion;
+				$this->imagen = $read->imagen;
+				$this->id_categoria = $read->id_categoria;
+				return true;
+			}else return false;
 		}
 	}
  ?>

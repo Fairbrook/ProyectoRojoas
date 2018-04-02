@@ -12,8 +12,13 @@
 		public function getId(){
 			return $this->id;
 		}
-		public function get($atributo){return $this->atributo;}
-		public function set($atributo,$value){$this->atributo = $value;}
+		public function get($atributo){
+			return $this->{$atributo};
+		}
+
+		public function set($atributo,$value){
+			$this->{$atributo} = $value;
+		}
 
 		public function save(){
 			if(!$this->id)$this->id=$this->getNextId():
