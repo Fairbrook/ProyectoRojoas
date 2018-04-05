@@ -31,7 +31,7 @@
 		
 		<div class="derecha">
 			<li>
-				<a href="contacto.php">Contactenos</a>
+				<a href="<?php echo URL.DS.'contacto' ?>">Contactenos</a>
 			</li>
 			<li>
 				<a href="reg.php">Registro</a>
