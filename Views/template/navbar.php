@@ -31,10 +31,10 @@
 		
 		<div class="derecha">
 			<li>
-				<a href="<?php echo URL.DS.'contacto' ?>">Contactenos</a>
+				<a href="<?php echo URL.'contacto' ?>">Contactenos</a>
 			</li>
 			<li>
-				<a href="<?php echo URL.DS.'registro' ?>">Registro</a>
+				<a href="<?php echo URL.'registro' ?>">Registro</a>
 			</li>
 		</div>
 	</ul>

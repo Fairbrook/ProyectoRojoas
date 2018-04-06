@@ -7,12 +7,13 @@
 <div class="cont">
 	<div id="map"></div>
 	<div class="formCont">
-		<form>
-			<span class="tag">Nombre: </span><input type="text" id="nombre">
-			<span class="tag">Teléfono: </span><input type="text" id="telefono">
-			<span class="tag">Email: </span><input type="email" id="email">
-			<span class="tag">Comentario: </span><textarea id="mensaje" cols="0" rows="5"></textarea>
+		<form action="<?php echo URL."contacto";?>" method="POST">
+			<span class="tag">Nombre: </span><input type="text" name="nombre">
+			<span class="tag">Teléfono: </span><input type="text" name="telefono">
+			<span class="tag">Email: </span><input type="email" name="email">
+			<span class="tag">Comentario: </span><textarea name="mensaje" cols="0" rows="5"></textarea>
+			<input type="submit">
 		</form>
-		<button onclick="send()">Enviar</button>
+		<!--button onclick="send()">Enviar</button-->
 	</div>
 </div>

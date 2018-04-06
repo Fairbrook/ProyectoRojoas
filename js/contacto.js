@@ -1,6 +1,6 @@
 function send(){
 	$.post(
-		"/enviarCorreo.php",
+		"enviarCorreo.php",
 		{
 			'tel':$('#telefono').val(),
 			'mensaje':$('#mensaje').val(),
