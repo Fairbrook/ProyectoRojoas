@@ -33,6 +33,7 @@
 		$sub_categorias->db()->close();
 		unset($sub_categorias);
 
+		session_start();
 		require_once "navbar.php";
 		}
 		

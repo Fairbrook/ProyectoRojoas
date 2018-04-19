@@ -34,7 +34,16 @@
 				<a href="<?php echo URL.'contacto' ?>">Contactenos</a>
 			</li>
 			<li>
-				<a href="<?php echo URL.'registro' ?>">Registro</a>
+				<a href="<?php echo URL.'registro' ?>">Registrate</a>
+			</li>
+			<li>
+				<?php 
+					if (isset($_SESSION['nombres'])) {
+						echo "<a>Bienvenido $_SESSION[nombres]</a>";
+					}else{
+				 ?>
+					<a href="<?php echo URL.'login'?>">Entrar</a>
+				<?php } ?>	
 			</li>
 		</div>
 	</ul>

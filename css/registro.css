@@ -1,16 +1,16 @@
-.group form{
+.group-registro form{
 	display: flex;
 	flex-flow: column;
 	margin: 0 auto;
 	color: var(--letras);
 	position: relative;
 	width: 80%;
-	max-width: 530px;
+	max-width: 540px;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
  
-.group form #btnSubmit{
+.group-registro form #btnSubmit{
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 4px;
@@ -23,18 +23,30 @@
 	cursor: pointer;
 }
 
-.group form input{
+.group-registro form input{
 	font-size: 1.3em;
+	width: 100%;
 }
 
-.group form h2{
+.group-registro form h2{
 	color: black;
 	text-align: center;
 	font-size: 2.5em;
 	font-family: 'Oswald', sans-serif;
 }
 
-.group form .error{
+.group-registro form .error{
 	display: none;
 	color: red;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.group-registro .inputs{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 20px;
+	text-align: center;
+	padding-top: 10px;
+
 }

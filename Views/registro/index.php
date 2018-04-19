@@ -17,36 +17,61 @@
   }
 </script>
 
-  <div class="group">
-    <form action="registro.php" method="POST">
-      <h2>Formulario de Registro</h2>
+<div class="group-registro">
+  <form action="<?php echo URL.'registro'; ?>" method="POST">
+    <h2>Formulario de Registro</h2>
 
+    <div class="inputs">
+      <div>
+        <label for="nombres">Nombres </label><br>
+        <input type="text" name="nombres" required/>   
+      </div>
 
-      <label for="nombres">Nombres <span><em>(requerido)</em></span></label>
-      <input type="text" name="nombres" required/>   
+      <div>
+        <label for="nombres">Usuario </label><br>
+        <input type="text" name="usuario" required/>   
+      </div>
+    </div>
 
-      <label for="nombres">Usuario <span><em>(requerido)</em></span></label>
-      <input type="text" name="usuario" required/>   
-      
-      <label for="apellido_p">Apellido Paterno <span><em>(requerido)</em></span></label>
-      <input type="text" name="apellido_p" required/>       
-      
-      <label for="apellido_ma">Apellido  Materno<span><em>(requerido)</em></span></label>
-      <input type="text" name="apellido_ma" required/>
+    <div class="inputs">
+      <div>
+        <label for="apellido_p">Apellido Paterno </label><br>
+        <input type="text" name="apellido_p" required/>       
+      </div>
 
-      <div id="errorEmail" class="error">*Los correos no coinciden</div>
-      <label for="email">Email <span><em>(requerido)</em></span></label>
-      <input type="email" name="email" id="txtEmail1" onkeyup="comp()" required/>
-      <label for="email">Confirmar Email <span><em>(requerido)</em></span></label>
-      <input type="email" id="txtEmail2" onkeyup="comp()" required/>
+      <div>
+        <label for="apellido_ma">Apellido  Materno</label><br>
+        <input type="text" name="apellido_m" required/>
+      </div>
+    </div>
+
+    <div id="errorEmail" class="error">*Los correos no coinciden</div>
+    <div class="inputs">
+      <div>
+        <label for="email">Email</label><br>
+        <input type="email" name="correo" id="txtEmail1" onkeyup="comp()" required/>
+      </div>
       
-      <div id="errorPassword" class="error">* Las contraseñas no coiciden</div>
-      <label for="password">Contraseña <span><em>(requerido)</em></span></label>
-      <input type="password" name="password" id="txtPassword1" onkeyup="comp()" required/>
-      <label for="password">Confirmar Contraseña <span><em>(requerido)</em></span></label>
-      <input type="password" id="txtPassword2" onkeyup="comp()" required/>             
+      <div>
+        <label for="email">Confirmar Email </label><br>
+        <input type="email" id="txtEmail2" onkeyup="comp()" required/>
+      </div>
+    </div>
+
+    <div id="errorPassword" class="error">* Las contraseñas no coiciden</div>
+    <div class="inputs">
+      <div>
+        <label for="password">Contraseña </label><br>
+        <input type="password" name="contrasena" id="txtPassword1" onkeyup="comp()" required/>
+      </div>
       
-      <center> <input class="form-btn" name="submit" type="submit" value="Siguiente" id="btnSubmit" /></center>
-    </p>
-  </form>
+      <div>
+        <label for="password">Confirmar Contraseña </label><br>
+        <input type="password" id="txtPassword2" onkeyup="comp()" required/>
+      </div>
+  </div>
+
+  <center> <input class="form-btn" name="submit" type="submit" value="Siguiente" id="btnSubmit" /></center>
+</p>
+</form>
 </div>

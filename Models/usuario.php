@@ -23,7 +23,7 @@
 		}
 
 		public function save(){
-			if(!$this->id)$this->id=$this->getNextId():
+			if(!$this->id)$this->id=$this->getNextId();
 
 			$query = "INSERT INTO usuarios (id, nombres, apellido_m, apellido_p, direccion, correo, contrasena, time) VALUES ($this->id,'$this->nombres','$this->apellido_m','$this->apellido_p','$this->direccion','$this->correo',sha('$this->contrasena'),NOW())";
 			$save = $this->db()->query($query);

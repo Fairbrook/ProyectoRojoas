@@ -8,18 +8,23 @@
 	text-align: left;
 	width: 100%;
 	padding-left: 30px;
-
-	display: grid;
-	grid-template-rows: auto 40% auto;
 }
 
 .producto-ver .attrib .desc{
 	font-size: 1.5em;
+	margin-bottom: 30px;
 }
 
 .producto-ver .attrib .nombre{
 	font-size: 3em;
 	color: var(--fondo);
-
+	margin-bottom: 30px;
+}
+.producto-ver .imagen{
+	max-height: 430px;
 }
 
+.producto-ver .precio{
+	font-size: 2.5em;
+	font-weight: bolder;
+}
