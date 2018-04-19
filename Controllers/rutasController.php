@@ -39,7 +39,10 @@ class rutasController extends \Core\controladorBase{
 			$registrar->set('nombres',$_POST['nombres']);
 			$registrar->set('correo',$_POST['correo']);
 			$registrar->set('contrasena',$_POST['contrasena']);
-			$registrar->save();
+			$usuario = $registrar->save();
+			if (isset($usuario)) {
+				header("Location: ".URL);
+			}
 		}else $this->view("registro");
 	}
 }

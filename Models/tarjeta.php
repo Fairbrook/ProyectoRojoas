@@ -23,7 +23,7 @@
 		}
 
 		public function save(){
-			if(!$this->id)$this->id=$this->getNextId():
+			if(!$this->id)$this->id=$this->getNextId();
 
 			$query = "INSERT INTO tarjetas (id, numero, mes, an, id_usuario, cod_seg, titular) VALUES ($this->id,$this->numero, $this->mes,$this->an,$this->id_usuario,$this->cod_seg, '$this->titular')";
 			$save = $this->db()->query($query);

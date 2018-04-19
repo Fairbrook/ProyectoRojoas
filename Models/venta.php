@@ -21,7 +21,7 @@
 		}
 
 		public function save(){
-			if(!$this->id)$this->id=$this->getNextId():
+			if(!$this->id)$this->id=$this->getNextId();
 
 			$query = "INSERT INTO ventas (id, id_fac, id_producto, subtotal, cantidad) VALUES ($this->id,$this->fac, $this->id_producto,$this->subtotal,$this->cantidad)";
 			$save = $this->db()->query($query);

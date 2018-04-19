@@ -1,3 +1,7 @@
+.group-registro{
+	padding-bottom: 30px;
+}
+
 .group-registro form{
 	display: flex;
 	flex-flow: column;
@@ -49,4 +53,8 @@
 	text-align: center;
 	padding-top: 10px;
 
+}
+
+.group-registro .direccion{
+	margin-right: 100%; 
 }

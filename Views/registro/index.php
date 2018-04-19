@@ -70,6 +70,9 @@
         <input type="password" id="txtPassword2" onkeyup="comp()" required/>
       </div>
   </div>
+  <div>
+      <span class="direccion">Direccion</span> <input type="text" name="direccion">
+  </div>
 
   <center> <input class="form-btn" name="submit" type="submit" value="Siguiente" id="btnSubmit" /></center>
 </p>

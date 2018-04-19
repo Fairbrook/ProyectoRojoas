@@ -20,7 +20,7 @@
 		}
 
 		public function save(){
-			if(!$this->id)$this->id=$this->getNextId():
+			if(!$this->id)$this->id=$this->getNextId();
 			$query = "INSERT INTO facturas (id, id_cliente, total, time) VALUES ($this->id, $this->id_cliente,$this->total, NOW())";
 			$save = $this->db()->query($query);
 			return $save;
