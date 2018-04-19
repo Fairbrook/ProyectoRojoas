@@ -27,8 +27,16 @@
 		public function categoria($id){
 			$productos = new producto();
 			$result = $productos->getAll();
+			$enviar = Array();
+			$cont=0;
+			foreach ($result as $key) {
+				if($key->id_categoria==$id){
+					$enviar[$cont]=$key;
+					$cont++;
+				}
+			}
 			$this->view("productos",
-				array("productos"=>$result),
+				array("productos"=>$enviar),
 				"categoria"
 			);
 		}
