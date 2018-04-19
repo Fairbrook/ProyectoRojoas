@@ -25,7 +25,12 @@
 		}
 
 		public function categoria($id){
-			echo $id;
+			$productos = new producto();
+			$result = $productos->getAll();
+			$this->view("productos",
+				array("productos"=>$result),
+				"categoria"
+			);
 		}
 
 		public function ver($id){

@@ -11,12 +11,12 @@
 			<?php echo ucfirst(strtolower($producto->get("descripcion")));?>
 		</div>
 		<div class="precio">
-			<?php echo $producto->get("precio");?>
+			Precio: <?php echo $producto->get("precio");?>
 		</div>
 		<div>
 			<form action="<?php echo URL."productos".DS."ver".DS.$producto->get("id"); ?>">
 				<input type="hidden" value="<?php echo $producto->get("id"); ?>">
-				<input type="submit" value="Agregar al carro">
+				<input type="submit" value="Agregar al carro" class="btn">
 			</form>
 		</div>
 	</div>
