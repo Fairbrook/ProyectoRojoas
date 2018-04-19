@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+#brand{
+	background: var(--fondo);
+	display: flex;
+	justify-content: center;
+}
+#brand h1{
+	margin-left: 10px;
+	text-align: center;
+	font-size: 3.5em;
+	font-family: 'Fjalla One', sans-serif;
+	color: var(--brand);
+}
+
+/*Estilos de listas desordenadas*/
+ul{
+	list-style: none;
+}
+
+/*Estilos de la barra general*/
+nav{
+	display: flex;
+	background: var(--fondo);
+}
+
+/*Estilos de los elementos de la lista*/
+nav li{
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/*Estilos de los links*/
+nav li>a{
+	padding: 15px;
+	display: inline-block;
+	margin-right: 20px;
+}
+a{
+	text-decoration: none;
+	color: var(--letras);
+	font-size: 1.5em;
+}
+nav li a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+nav li:hover{background: var(--hover-option);}
+
+/*Estilos de los links en submenú*/
+nav li .sub li a{
+	display: block;
+}
+
+/*Estilo de los submenu*/
+nav li >.sub{
+	display: none;
+	padding: 10PX;
+	padding-top: 0px;
+	position: absolute;
+	background: var(--fondo2);
+	top: 100%;
+	min-width: 200%;
+	z-index: 2;
+}
+
+nav li:hover .sub{
+	display: block;
+}
+nav li .sub:hover{
+	display: block;
+}
+
+/*Estilos de la lista descriptiva*/
+nav dl{
+	padding-top: 10px;
+	display: block;
+}
+nav dd{
+	background: var(--fondo2);
+	padding: 3px;
+}
+nav dt{
+	color: var(--subtitulos);
+	font-size: 2em;
+}
+
+/*Estilo titulo de la navbar*/
+.nav-header{
+	display: flex;
+	align-items: center;
+	font-size: 3em;
+	margin-right: 20px;
+
+}
+.nav-header a{
+	font-size: .75em;
+}
+
+/*Estilo del menu (lsita de opciones)*/
+#menu{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Oswald', sans-serif;
+	width: 100%;
+}
+
+#menu .izquierda{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#menu .derecha{
+	display: flex;
+}
+
+/*Estilo del boton desplegable*/
+#nav-button{
+	width: 20px;
+	height: 30px;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	margin: 5px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#nav-button span{
+	width: 20px;
+	height: 4px;
+	background: var(--brand);
+	position: relative;
+}
+#nav-button span:after, #nav-button span:before{
+	content: '';
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 20px;
+	height: 4px;
+	background: var(--brand);
+	position: relative;
+}
+#nav-button span:after{top: 5px;}
+#nav-button span:before{top: -9.5px;}
+
+
+@media screen and (max-width: 1000px){
+	#menu{
+		flex-wrap: wrap;
+	}
+	nav li{
+		display: block;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 956px){
+	#menu .izquierda{width: auto;}
+}
+
+@media screen and (max-width: 790px){
+	#menu{
+		flex-flow: column;
+		display: none;
+		box-shadow: none;
+	}
+	#menu .izquierda{
+		flex-flow: column;
+	}
+	.nav-header{
+		text-align: center;
+		justify-content: left;
+		background: var(--fondo);
+		margin: 0;
+		font-size: 5em;
+	}
+	nav li >.sub{
+		position: relative;
+		box-shadow: none;
+		top: 0;
+	}
+	#menu li{
+		margin: 0;
+	}
+	#menu li a{
+		display: block;
+	}
+	li.mostrar .sub{
+		display: block;
+	}
+	#menu.active{
+		display: block;
+	}
+	#nav-button{
+		display: flex;
+	}
+	nav{
+		background-color: var(--fondo);
+		flex-flow: column;
+		padding: 0;
+		box-shadow: 0 0 0;
+	}
+}

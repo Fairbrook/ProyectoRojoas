@@ -1,0 +1,28 @@
+footer{
+	background: var(--fondo);
+	display: flex;
+	align-items: center;
+	bottom: 0;
+	color: var(--letras);
+	width: 100%;
+	position: absolute;
+	height: 50px;
+}
+footer ul{
+	display: flex;
+	align-items: center;
+}
+footer li a{
+	text-decoration: none;
+	color: var(--letras);
+}
+footer a:hover{
+	text-decoration: underline;
+}
+footer li{
+	margin: 10px;
+}
+footer ul{
+	list-style-type: none;
+	display: flex;
+}
