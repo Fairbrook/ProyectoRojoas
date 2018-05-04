@@ -43,13 +43,13 @@ nav li>a{
 a{
 	text-decoration: none;
 	color: var(--letras);
-	font-size: 1.5em;
+	font-size: 1.7vw;
 }
 nav li a:hover{
 	text-decoration: underline;
 	cursor: pointer;
 }
-nav li:hover{background: var(--hover-option);}
+/*nav li:hover{background: var(--hover-option);}*/
 
 /*Estilos de los links en submenú*/
 nav li .sub li a{
@@ -65,7 +65,7 @@ nav li >.sub{
 	background: var(--fondo2);
 	top: 100%;
 	min-width: 200%;
-	z-index: 2;
+	z-index: 4;
 }
 
 nav li:hover .sub{

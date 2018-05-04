@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
-form{
+form .inputs{
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-gap: 10px;
@@ -50,7 +50,7 @@ form .tag{
 	cursor: pointer;
 }
 @media screen and (max-width: 1100px){
-	form{
+	form .inputs{
 		width: auto;
 	}
 
@@ -65,7 +65,7 @@ form .tag{
 		margin-top: 20px;
 		width: 100%;
 	}
-	form{
+	form .inputs{
 		width: 90%;
 	}
 	#map{
@@ -87,7 +87,7 @@ form .tag{
 	}
 }
 @media screen and (max-width: 505px){
-	form{
+	form .inputs{
 		text-align: center;
 		grid-template-columns: auto;
 	}

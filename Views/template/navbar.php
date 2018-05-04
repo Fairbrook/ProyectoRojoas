@@ -1,5 +1,9 @@
+<script src="<?php echo JS;?>cookie.js"></script>
+<script src="<?php echo JS;?>popup.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div id="google_translate_element"></div>
 <div id="brand">
-	
 	<span id="nav-button" onclick="show()">
 		<span></span>
 	</span>
@@ -33,18 +37,30 @@
 			<li>
 				<a href="<?php echo URL.'contacto' ?>">Contactenos</a>
 			</li>
+			<?php 
+				if (isset($_SESSION['nombres'])) {
+					echo "<li><a href='".URL."logout'>Bienvenido $_SESSION[nombres]</a></li>";
+				}else{
+			?>
 			<li>
 				<a href="<?php echo URL.'registro' ?>">Registrate</a>
 			</li>
 			<li>
-				<?php 
-					if (isset($_SESSION['nombres'])) {
-						echo "<a>Bienvenido $_SESSION[nombres]</a>";
-					}else{
-				 ?>
-					<a href="<?php echo URL.'login'?>">Entrar</a>
-				<?php } ?>	
+					<a href="<?php echo URL.'login'?>">Entrar</a>	
+			</li>
+			<?php } ?>	
+			<li>
+				<a href="<?php echo URL;?>carrito"><span class="fas fa-shopping-cart"></span></a>
 			</li>
 		</div>
 	</ul>
 </nav>
+
+
+<div class = "pop-up">
+	<div class = "title">Seleccione un idioma</div>
+	<div class="flex-row">
+		<div class="button" id="ing" style="cursor:pointer;">Ingles</div>
+		<div class="button" id="esp" style="cursor:pointer;">Español</div>
+	</div>
+</div>

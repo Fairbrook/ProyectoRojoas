@@ -14,8 +14,10 @@
 	<head>
 		<title>Ropa el carlos</title>
 		<link rel="stylesheet" href="<?php echo CSS;?>global.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="<?php echo JS; ?>jquery-3.2.1.js"></script>
 		<script src="<?php echo JS; ?>navbar.js"></script>
+		<script src="<?php echo JS; ?>popup.js"></script>
 		<script src="<?php echo URL; ?>font-awesome\js\fontawesome-all.min.js"></script>
 	</head>
 	<body>

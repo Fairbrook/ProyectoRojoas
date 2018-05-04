@@ -1,0 +1,45 @@
+.login form{
+    margin-top: 30px;
+    width: 80%;
+    max-width: 550px;
+    
+    color: var(--letras);
+    margin: 0 auto;
+}
+
+.login .error{
+    color: red;
+}
+
+.login form input{
+    box-sizing: border-box;
+}
+
+.login .tow-column{
+    display: grid;
+    grid-template-columns: 45% auto;
+    margin-top: 15px;
+    color: rgb(61, 60, 60);
+    width: 100%;
+    font-size: 1.3vw;
+    text-align: right;
+    grid-gap: 20px;
+}
+
+.login{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px; 
+}
+
+.login .txt{
+    width: 100%;
+}
+
+.login h1{
+	color: black;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 'Oswald', sans-serif;
+}
+

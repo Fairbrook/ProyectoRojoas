@@ -14,7 +14,7 @@
 			Precio: <?php echo $producto->get("precio");?>
 		</div>
 		<div>
-			<form action="<?php echo URL."productos".DS."ver".DS.$producto->get("id"); ?>">
+			<form action="<?php echo URL."productos".DS."ver".DS.$producto->get("id"); ?>" method="POST">
 				<input type="hidden" value="<?php echo $producto->get("id"); ?>">
 				<input type="submit" value="Agregar al carro" class="btn">
 			</form>

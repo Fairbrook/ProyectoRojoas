@@ -1,0 +1,23 @@
+.carrito{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.carrito .table{
+    width: 85%;
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.carrito .prod{
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+.carrito .total{
+    margin-top: 20px;
+}

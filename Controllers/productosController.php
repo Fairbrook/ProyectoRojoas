@@ -42,14 +42,21 @@
 		}
 
 		public function ver($id){
-			$productos = new producto();
-			$productos->set("id", $id);
+			if($_SERVER['REQUEST_METHOD']=='POST'){
+				$cookie = "";
+				if(isset($_COOKIE['carrito']))$cookie = $_COOKIE['carrito'];
+				if(\strlen($cookie)>0)setcookie("carrito",$cookie."-".$id,time()+7200,"/");
+				else setcookie("carrito",$id,time()+7200,"/");
+			}else{
+				$productos = new producto();
+				$productos->set("id", $id);
 
-			if($productos->read()){
-				$this->view("productos",array(
-				"producto" => $productos
-				), "ver");
-			}else $this->view("error");
+				if($productos->read()){
+					$this->view("productos",array(
+					"producto" => $productos
+					), "ver");
+				}else $this->view("error");
+			}
 		}
 	}
  ?>

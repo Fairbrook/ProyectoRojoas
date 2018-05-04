@@ -9,7 +9,7 @@
 	color: var(--letras);
 	position: relative;
 	width: 80%;
-	max-width: 540px;
+	max-width: 590px;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
@@ -27,9 +27,11 @@
 	cursor: pointer;
 }
 
-.group-registro form input{
-	font-size: 1.3em;
+.group-registro input{
+	font-size: 1.3vw;
+	color: rgb(61, 60, 60);
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .group-registro form h2{
@@ -48,13 +50,23 @@
 
 .group-registro .inputs{
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 45% auto;
 	grid-gap: 20px;
 	text-align: center;
-	padding-top: 10px;
+	margin-top: 10px;
 
 }
 
 .group-registro .direccion{
 	margin-right: 100%; 
+}
+
+.group-registro .tow-column{
+	display: grid;
+	grid-template-columns: auto 60%;
+	grid-gap: 10px;
+}
+
+.group-registro .tow-column div{
+	box-sizing: border-box;
 }
