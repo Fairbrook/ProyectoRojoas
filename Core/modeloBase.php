@@ -1,7 +1,7 @@
 <?php namespace Core;
 	class modeloBase extends entidadBase
 	{
-		private $table;
+		protected $table;
 
 		function __construct($table)
 		{

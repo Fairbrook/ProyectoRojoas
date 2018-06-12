@@ -22,7 +22,9 @@
 	</head>
 	<body>
 	
-<?php	
+<?php
+		session_start();	
+		if(!isset($_SESSION['manager'])){
 		$categorias = new categoria();
 		$cat = $categorias->getAll();
 
@@ -35,8 +37,12 @@
 		$sub_categorias->db()->close();
 		unset($sub_categorias);
 
-		session_start();
+		
 		require_once "navbar.php";
+		}
+		else{
+			require_once "adminNavbar.php";
+		}
 		}
 		
 		function __destruct()

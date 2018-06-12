@@ -3,6 +3,7 @@
 use \Models\usuario as usuario;
 use \Models\tarjeta as tarjeta;
 use \Models\producto as producto;
+use \Models\manager as manager;
 class rutasController extends \Core\controladorBase{
 
 	public function contacto(){
@@ -59,6 +60,8 @@ class rutasController extends \Core\controladorBase{
 			$tarjeta->set("id_usuario",$registrar->getId());
 			$tarjeta->save();
 			if (isset($usuario)) {
+				$_SESSION['nombres']=$registrar->get('nombres');
+				$_SESSION['id']=$registrar->getId();
 				header("Location: ".URL);
 			}
 		}else $this->view("registro");
@@ -93,7 +96,17 @@ class rutasController extends \Core\controladorBase{
 			$usuario->set('username',$_POST['username']);
 			$usuario->set('contrasena',$_POST['pass']);
 			$id = $usuario->login();
-			if($id==-1)$this->view("login",array("error"=>"error"));
+			if($id==-1){
+				$manager = new manager();
+				$manager->set("username",$_POST['username']);
+				$manager->set("password",$_POST['pass']);
+				if($manager->login()==-1)
+				$this->view("login",array("error"=>"error"));
+				else{
+					$_SESSION['manager']=true;
+					header("Location: ".URL."admin");
+				}
+			}
 			else {
 				$usuario->set('id',$id);
 				$usuario->read();
@@ -149,6 +162,7 @@ class rutasController extends \Core\controladorBase{
 	public function logout(){
 		unset($_SESSION['nombres']);
 		unset($_SESSION['id']);
+		unset($_SESSION['manager']);
 		header("Location: ".URL);
 	}
 

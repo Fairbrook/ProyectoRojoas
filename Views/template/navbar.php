@@ -13,7 +13,7 @@
 	<ul id="menu">
 		<div class="izquierda">
 			<li>
-				<a href=<?php echo URL; ?>>Inicio</a>
+				<a href=<?php echo URL;?>>Inicio</a>
 			</li>
 			<?php for($i=0;$i<count($cat);$i++){ ?>
 			<li class="seccion">
@@ -21,11 +21,11 @@
 				<div class="sub">
 					<dl>
 						<?php 
-						for($j=0;$j<count($sub);$j++){ 
-							if($sub[$j]->id_categoria==$cat[$i]->id){
-								echo "<dd><a href=".URL."productos/categoria/{$sub[$j]->id}>{$sub[$j]->nombre}</a></dd>";
-							}
-						} 
+							for($j=0;$j<count($sub);$j++){ 
+								if($sub[$j]->id_categoria==$cat[$i]->id){
+									echo "<dd><a href=".URL."productos/categoria/{$sub[$j]->id}>{$sub[$j]->nombre}</a></dd>";
+								}
+							} 
 						?>
 					</dl>
 				</div>
@@ -51,6 +51,7 @@
 			<?php } ?>	
 			<li>
 				<a href="<?php echo URL;?>carrito"><span class="fas fa-shopping-cart"></span></a>
+				
 			</li>
 		</div>
 	</ul>

@@ -10,7 +10,6 @@
 		private $correo;
 		private $contrasena;
 		private $fecha_nac;
-		private $type;
 
 		public function __construct(){parent::__construct("usuarios");}
 
@@ -28,9 +27,8 @@
 		public function save(){
 			if(!$this->id)$this->id=$this->getNextId();
 
-			$query = "INSERT INTO usuarios (id, username, nombres, apellido_m, apellido_p, direccion, correo, contrasena, fecha_nac, type, time) VALUES ($this->id,'$this->username','$this->nombres','$this->apellido_m','$this->apellido_p','$this->direccion','$this->correo',sha('$this->contrasena'),
-			'$this->fecha_nac',
-			$this->type ,NOW())";
+			$query = "INSERT INTO usuarios (id, username, nombres, apellido_m, apellido_p, direccion, correo, contrasena, fecha_nac, time) VALUES ($this->id,'$this->username','$this->nombres','$this->apellido_m','$this->apellido_p','$this->direccion','$this->correo',sha('$this->contrasena'),
+			'$this->fecha_nac',NOW())";
 			$save = $this->db()->query($query);
 			return $save;
 		}
@@ -43,7 +41,7 @@
 			direccion = '$this->direccion',
 			correo = '$this->correo',
 			contrasena = sha('$this->contrasena'),
-			tipo = $this->type,
+			fecha_nac = $this->fecha_nac,
 			time = NOW()
 			WHERE id = $this->id";
 			$update = $this->db()->query($query);
@@ -57,12 +55,12 @@
 		public function read(){
 			$read = $this->getById($this->id);
 			$this->username = $read->username;
-			$this->type = $read->type;
 			$this->nombres = $read->nombres;
 			$this->apellido_m = $read->apellido_m;
 			$this->apellido_p = $read->apellido_p;
 			$this->direccion = $read->direccion;
 			$this->correo = $read->correo;
+			$this->fecha_nac = $read->fecha_nac;
 		}
 
 		public function login(){

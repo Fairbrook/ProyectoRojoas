@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
-form .inputs{
+.formCont form .inputs{
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-gap: 10px;
@@ -10,7 +10,7 @@ form .inputs{
 	position: relative;
 	width: 90%;
 }
-form input, textarea{
+.formCont form input, textarea{
 	border: 1px var(--boton) solid;
 	color: var(--letras);
 	font-size: 1.2em;
@@ -18,7 +18,7 @@ form input, textarea{
 	font-family: 'Libre Baskerville', serif;
 	position: relative;
 }
-form .tag{
+.formCont form .tag{
 	font-size: 1.5em
 }
 .cont{

@@ -12,7 +12,7 @@
 
         <div>
           <label for="usuario">Usuario </label><br>
-          <input type="text" name="usuario" pattern="([a-zA-Z]){1,}" required/>   
+          <input type="text" name="usuario" pattern="([a-zA-Z0-9]){1,}" required/>   
         </div>
       </div>
 
