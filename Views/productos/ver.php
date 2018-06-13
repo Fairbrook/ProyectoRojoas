@@ -1,5 +1,5 @@
 
-<div class="producto-ver">
+<div class="producto-ver content-margin">
 	<div class="imagen">
 		<img src="<?php echo IMG.$producto->get('imagen'); ?>" alt="">
 	</div>

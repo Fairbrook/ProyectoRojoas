@@ -43,7 +43,7 @@ nav li>a{
 a{
 	text-decoration: none;
 	color: var(--letras);
-	font-size: 1.7vw;
+	font-size: 1.7em;
 }
 nav li a:hover{
 	text-decoration: underline;
@@ -170,7 +170,10 @@ nav dt{
 		display: none;
 		box-shadow: none;
 	}
-	#menu .izquierda{
+	#menu > .derecha{
+		flex-flow: column;
+	}
+	#menu >.izquierda{
 		flex-flow: column;
 	}
 	.nav-header{
@@ -184,6 +187,8 @@ nav dt{
 		position: relative;
 		box-shadow: none;
 		top: 0;
+		min-width: 0;
+		max-width: 100%;
 	}
 	#menu li{
 		margin: 0;

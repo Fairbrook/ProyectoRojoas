@@ -1,20 +1,22 @@
 <?php namespace Controllers;
 
+require 'phpmailer/PHPMailer/src/Exception.php';
+require 'phpmailer/PHPMailer/src/PHPMailer.php';
+require 'phpmailer/PHPMailer/src/SMTP.php';
+
 use \Models\usuario as usuario;
 use \Models\tarjeta as tarjeta;
 use \Models\producto as producto;
 use \Models\manager as manager;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 class rutasController extends \Core\controladorBase{
 
 	public function contacto(){
 		if($_SERVER['REQUEST_METHOD']=='POST'){
-			require './phpmailer'.DS.'class.phpmailer.php';
-
-			
-
-			$mail = new \PHPMailer();
+			$mail = new PHPMailer(true);
 			$mail->IsSMTP();
-			$mail->SMTPDebug = 1;
+			$mail->SMTPDebug = 0;
 			$mail->SMTPAuth = true;
 			$mail->SMTPSecure = 'ssl';
 			$mail->Host = 'smtp.gmail.com';

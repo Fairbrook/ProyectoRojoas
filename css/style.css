@@ -28,10 +28,11 @@ body{
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 4px;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	border: none;
 	background: var(--fondo);
-	width: 300px;
+	width: 100%;
+	max-width: 300px;
 	display: block;
 	color: var(--letras-botones);
 	cursor: pointer;

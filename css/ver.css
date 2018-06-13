@@ -1,7 +1,8 @@
 .producto-ver{
 	display: flex;
-
+	max-width: 950px;
 	padding: 20px;
+	margin: 0 auto;
 }
 
 .producto-ver .attrib{
@@ -24,7 +25,28 @@
 	max-height: 430px;
 }
 
+.producto-ver .imagen img{
+	max-height: 430px;
+}
+
 .producto-ver .precio{
 	font-size: 2.5em;
 	font-weight: bolder;
+}
+
+@media screen and (max-width:710px){
+	.producto-ver{
+		flex-flow: column;
+		max-width: 100%;
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.producto-ver > div.nombre >h1{
+		max-width: 100%;
+	}
+	.producto-ver .attrib{
+		text-align: center;
+		padding-left: 0;
+	}
 }

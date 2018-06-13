@@ -1,4 +1,4 @@
-.add .form-add{
+.add .form-add {
 	display: grid;
 	grid-template-columns: 45% 45%;
 	grid-column-gap: 10%;
@@ -7,14 +7,50 @@
 	margin: 0 auto;
 	margin-top: 30px;
 }
-.add .line{
+.add .line {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	box-sizing: border-box;
-	margin:none;
+	margin: none;
 	margin-bottom: 30px;
+	align-items: center;
+}
+.add .line :not(input):not(select) {
+	font-size: 1.8em;
+}
+.add select {
+	height: 30px;
+}
+.add input[type=number] {
+	width: 100%;
 }
 
-input[type=number]{
+.add textarea {
+	max-width: 100%;
 	width: 100%;
+}
+
+.add select {
+	min-width: 100%;
+}
+
+@media screen and (max-width: 996px) {
+	.add .line {
+		grid-template-columns: 100%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.add .form-add {
+		width: 95%;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.add .form-add {
+		grid-template-columns: 100%;
+		grid-column-gap: 0;
+		text-align: center;
+	}
 }

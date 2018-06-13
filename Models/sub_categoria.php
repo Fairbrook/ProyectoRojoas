@@ -21,13 +21,13 @@
 
 		public function save(){
 			if(!$this->id)$this->id=$this->getNextId();
-			$query = "INSERT INTO sub_categorias (id, id_cliente, total, time) VALUES ($this->id, $this->idd_cliente,$this->total, NOW())";
+			$query = "INSERT INTO sub_categorias (id, nombre, descript, id_categoria) VALUES ({$this->id}, '{$this->nombre}','{$this->descript}',{$this->id_categoria})";
 			$save = $this->db()->query($query);
 			return $save;
 		}
 
 		public function update(){
-			$query = "UPDATE sub_categorias SET nombre = '$this->id_cliente', descript = '$this->descript', id_categoria = $this->id_categoria WHERE id = $this->id";
+			$query = "UPDATE sub_categorias SET nombre = '$this->nombre', descript = '$this->descript', id_categoria = $this->id_categoria WHERE id = $this->id";
 			$update = $this->db()->query($query);
 			return $update;
 		}

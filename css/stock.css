@@ -1,0 +1,21 @@
+.stock{
+    width: 60%;
+    margin:0 auto;
+}
+
+.stock>div{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    text-align: center;
+}
+
+.stock>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.stock>div>div>img{
+    max-height: 100px;
+}

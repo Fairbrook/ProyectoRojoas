@@ -17,13 +17,13 @@
 
 .login .tow-column{
     display: grid;
-    grid-template-columns: 45% auto;
+    grid-template-columns: 45% 45%;
     margin-top: 15px;
     color: rgb(61, 60, 60);
     width: 100%;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     text-align: right;
-    grid-gap: 20px;
+    grid-gap: 10%;
 }
 
 .login{
@@ -43,3 +43,16 @@
 	font-family: 'Oswald', sans-serif;
 }
 
+@media screen and (max-width:642px){
+    .login form{
+        width: 100%;
+        max-width: 100%;
+    }
+    .login>form>div>input {
+        margin-right: 20px;
+    }
+    .login > form > div > input[type=submit]{
+        margin:0 auto;
+        margin-top: 30px;
+    }
+}

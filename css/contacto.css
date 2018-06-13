@@ -2,8 +2,8 @@
 
 .formCont form .inputs{
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-gap: 10px;
+	grid-template-columns: 45% 45%;
+	grid-gap: 10%;
 	text-align: right;
 	margin: 0 auto;
 	color: var(--letras);

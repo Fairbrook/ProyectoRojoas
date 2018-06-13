@@ -18,7 +18,7 @@
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 4px;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	border: none;
 	background: var(--fondo);
 	width: 300px;
@@ -28,7 +28,7 @@
 }
 
 .group-registro input{
-	font-size: 1.3vw;
+	font-size: 1.3em;
 	color: rgb(61, 60, 60);
 	width: 100%;
 	box-sizing: border-box;
@@ -50,8 +50,8 @@
 
 .group-registro .inputs{
 	display: grid;
-	grid-template-columns: 45% auto;
-	grid-gap: 20px;
+	grid-template-columns: 45% 45%;
+	grid-gap: 10%;
 	text-align: center;
 	margin-top: 10px;
 
@@ -63,10 +63,25 @@
 
 .group-registro .tow-column{
 	display: grid;
-	grid-template-columns: auto 60%;
-	grid-gap: 10px;
+	grid-template-columns: 40% 50%;
+	grid-gap: 10%;
 }
 
 .group-registro .tow-column div{
 	box-sizing: border-box;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+}
+
+.group-registro .tow-column div input{
+	width: 100%;
+}
+
+@media screen and (max-width: 610px){
+	.group-registro .inputs{
+		grid-template-columns: 100%;
+		grid-gap: 0;
+	}
+	
 }
