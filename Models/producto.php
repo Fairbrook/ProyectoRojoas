@@ -32,7 +32,7 @@
 		}
 
 		public function update(){
-			$query = "UPDATE productos SET nombre = '$this->nombre', cantidad = $this->cantidad, precio = $this->precio, descripcion = $this->descripcion, imagen = '$this->imagen', id_categoria = $this->id_categoria WHERE id = $this->id";
+			$query = "UPDATE productos SET nombre = '$this->nombre', cantidad = $this->cantidad, precio = $this->precio, descripcion = '$this->descripcion', imagen = '$this->imagen', id_categoria = $this->id_categoria WHERE id = $this->id";	
 			$update = $this->db()->query($query);
 			return $update;
 		}

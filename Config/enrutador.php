@@ -29,18 +29,18 @@
 					}else self::error();
 				}
 			}else{
-						$controlador = "rutasController";
-						$ruta = ROOT."Controllers".DS.$controlador.".php";
-						require_once $ruta;
-						$mostrar = "Controllers\\". $controlador;
-						$controlador = new $mostrar;
-						$metodo = $request->getControlador();
-						$argumento = $request->getMetodo();
-						//echo $metodo;
-						if (is_callable(array($controlador,$metodo))) {
-							call_user_func(array($controlador,$metodo ),$argumento);
-						}else self::error();
-					}
+				$controlador = "rutasController";
+				$ruta = ROOT."Controllers".DS.$controlador.".php";
+				require_once $ruta;
+				$mostrar = "Controllers\\". $controlador;
+				$controlador = new $mostrar;
+				$metodo = $request->getControlador();
+				$argumento = $request->getMetodo();
+				//echo $metodo;
+				if (is_callable(array($controlador,$metodo))) {
+					call_user_func(array($controlador,$metodo ),$argumento);
+				}else self::error();
+			}
 		}
 	}
  ?>

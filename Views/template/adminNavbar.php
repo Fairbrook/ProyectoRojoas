@@ -19,6 +19,9 @@
 			<li>	
 				<a href=" <?php echo URL.'admin'.DS.'addCat' ?> ">Añadir categorias</a>
 			</li>
+			<li>
+				<a href="<?php echo URL."admin".DS."pedidos" ?>">Ver pedidos</a>
+			</li>
 		</div>
 		<div class="derecha">	
 			<li>	

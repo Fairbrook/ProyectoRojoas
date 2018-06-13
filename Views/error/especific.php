@@ -9,5 +9,5 @@
 </style>
 
 <div id="error">
-	<h1>$mensaje</h1>
+	<h1><?php echo $mensaje;?></h1>
 </div>

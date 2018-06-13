@@ -3,6 +3,9 @@
 use \Models\sub_categoria as sub_categoria;
 use \Models\producto as producto;
 use \Models\categoria as categoria;
+use \Models\descuento as descuento;
+use \Models\factura as factura;
+use \Models\usuario as usuario;
 
 class adminController extends \Core\controladorBase{
 	public function index(){
@@ -14,14 +17,17 @@ class adminController extends \Core\controladorBase{
 		}
 	}
 	public function add(){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
 		if($_SERVER['REQUEST_METHOD']=='POST'){
 			
 			$producto = new producto();
+			$descuento = new descuento();
 			$fileName = $producto->getNextId();
-			$producto->set("id",$fileName);
+			$id = $fileName;
 			$fileName = $this->uploadImage($fileName);
 			if($fileName==1)header("Location: ".URL."error".DS."mensaje".DS."Error al subir imagen");
 			if($fileName==2)header("Location: ".URL."error".DS."mensaje".DS."Formato de archivo incorrecto");
+			$producto->set("id",$id);
 			$producto->set("nombre",$_POST['nombre']);
 			$producto->set("cantidad",$_POST['cantidad']);
 			$producto->set("precio",$_POST['precio']);
@@ -29,6 +35,23 @@ class adminController extends \Core\controladorBase{
 			$producto->set("imagen",$fileName);
 			$producto->set("id_categoria",$_POST['categoria']);
 			$producto->save();
+			
+			$descuento->set("id_producto",$id);
+			$descuento->set("descuento",$_POST['desc1']);
+			$descuento->set("cantidad",$_POST['cant1']);
+			$descuento->save();
+
+			$descuento->set("id",null);
+			$descuento->set("descuento",$_POST['desc2']);
+			$descuento->set("cantidad",$_POST['cant2']);
+			$descuento->save();
+
+			$descuento->set("id",null);
+			$descuento->set("descuento",$_POST['desc3']);
+			$descuento->set("cantidad",$_POST['cant3']);
+			$descuento->save();
+
+			header("Location: ".URL."error".DS."mensaje".DS."Registro exitoso");	
 		}else {
 			$categoria = new sub_categoria();
 			$categorias = $categoria->getAll();
@@ -36,6 +59,8 @@ class adminController extends \Core\controladorBase{
 		}
 	}
 	public function addCat($type="cat"){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
+
 		if($_SERVER['REQUEST_METHOD']=='POST'){
 			if($type=="cat"){
 				$categoria = new categoria();
@@ -55,6 +80,70 @@ class adminController extends \Core\controladorBase{
 		}
 	}
 
+	public function mod($id){
+		if(!isset($id))\header("Location: ".URL."error");
+		if($_SERVER['REQUEST_METHOD']=='POST'){
+			$producto = new producto();
+			$producto->set("id",$id);
+			$producto->read();
+			$producto->set("cantidad",$_POST['cantidad']);
+			$producto->update();
+
+			$descuento = new descuento();
+			$descuentos = $descuento->getByProducto($id);
+
+			$descuento->set("id",$descuentos[0]->id);
+			$descuento->read();
+			$descuento->set("descuento",$_POST['desc1']);
+			$descuento->set("cantidad",$_POST['num1']);
+			$descuento->update();
+
+			$descuento->set("id",$descuentos[1]->id);
+			$descuento->read();
+			$descuento->set("descuento",$_POST['desc2']);
+			$descuento->set("cantidad",$_POST['num2']);
+			$descuento->update();
+
+			$descuento->set("id",$descuentos[2]->id);
+			$descuento->read();
+			$descuento->set("descuento",$_POST['desc3']);
+			$descuento->set("cantidad",$_POST['num3']);
+			$descuento->update();
+			header("Location: ".URL."error".DS."mensaje".DS."Actualización exitosa");
+		}else{
+			$producto = new producto();
+			$producto->set("id",$id);
+			$producto->read();
+			$categoria = new sub_categoria();
+			$categoria->set("id",$producto->get("id_categoria"));
+			$categoria->read();
+			$descuento = new descuento();
+			$descuentos = $descuento->getByProducto($id);
+			$this->view("admin",
+					array(
+						"producto"=>$producto,
+						"categoria"=>$categoria,
+						"descuentos"=>$descuentos
+					),
+					"update");
+		}
+	}
+
+	public function pedidos(){
+		$factura = new factura();
+		$facturas = $factura->getAll();
+		$usuarios = array();
+		foreach ($facturas as $x) {
+			$usuario = new usuario();
+			$usuario->set("id",$x->id_cliente);
+			$usuario->read();
+			$usuarios[] = $usuario;
+		}
+		$this->view("admin",array(
+			"facturas"=>$facturas,
+			"usuarios"=>$usuarios
+		),"facturas");
+	}
 	private function uploadImage($name){
 		$target = "C:\\xampp\\htdocs\\ProyectoRojoas\\img\\".$name;
 		

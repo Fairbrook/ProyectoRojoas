@@ -12,7 +12,7 @@
 			</div>
 			<div class="line">
 				<div>Cantidad:</div>
-				<input type="number" name="cantidad" class="generic-input">
+				<input type="number" min="0" name="cantidad" class="generic-input">
 			</div>
 			<div class="line">
 				<div>Precio: </div>
@@ -34,21 +34,21 @@
 			</div>
 			<div class="line">
 				<div>Descuento 1:</div>
-				<input type="number" min="0" name="desc1" class="generic-input">
+				<input type="number" min="1" value="10" name="desc1" class="generic-input">
 				<div>Número:</div>
-				<input type="number" min="0" name="cant1" class="generic-input">
+				<input type="number" min="0" value="5" name="cant1" class="generic-input">
 			</div>
 			<div class="line">
 				<div>Descuento 2:</div>
-				<input type="number" min="0" name="desc2" class="generic-input">
+				<input type="number" min="1" value="20" name="desc2" class="generic-input">
 				<div>Número:</div>
-				<input type="number" min="0" name="cant2" class="generic-input">
+				<input type="number" min="0" value="10" name="cant2" class="generic-input">
 			</div>
 			<div class="line">
 				<div>Descuento 3:</div>
-				<input type="number" min="0" name="desc3" class="generic-input">
+				<input type="number" min="1" value="30" name="desc3" class="generic-input">
 				<div>Número:</div>
-				<input type="number" min="0" name="cant3" class="generic-input">
+				<input type="number" min="0" value="15" name="cant3" class="generic-input">
 			</div>
 			<div class="line">
 				<div></div>

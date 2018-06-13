@@ -40,6 +40,22 @@
 			$this->cantidad = $read->cantidad;
 			$this->id_producto = $read->id_producto;
 		}
+
+		public function getByProducto($id){
+		$query = $this->db()->query("SELECT * FROM {$this->table} where id_producto = {$id}");
+
+			if(!$this->db()->errno){
+				$result = array();
+				if ($query->num_rows > 0) {
+					while ($row=$query->fetch_object()) {
+						$result[]=$row;
+					}
+				}
+				return $result;
+
+			}else 
+				$this->getError();
+		}
 	}
 
  ?>
