@@ -39,7 +39,8 @@
 			</li>
 			<?php 
 				if (isset($_SESSION['nombres'])) {
-					echo "<li><a href='".URL."logout'>Bienvenido $_SESSION[nombres]</a></li>";
+					echo "<li><a href='".URL."factura'>Bienvenido $_SESSION[nombres]</a></li>";
+					echo "<li><a href='".URL."logout'>Salir</a></li>";
 				}else{
 			?>
 			<li>

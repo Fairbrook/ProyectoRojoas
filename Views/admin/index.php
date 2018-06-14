@@ -1,16 +1,16 @@
 <div class="stock content-margin">
 	<div>
 		<div>
-			<h2>Imagen</h2>
+			<h2 class="h2-header">Imagen</h2>
 		</div>
 		<div>
-			<h2>Nombre</h2>
+			<h2 class="h2-header">Nombre</h2>
 		</div>
 		<div>
-			<h2>Descripcion</h2>
+			<h2 class="h2-header">Descripcion</h2>
 		</div>
 		<div>
-			<h2>Cantidad</h2>
+			<h2 class="h2-header">Cantidad</h2>
 		</div>
 		<div>
 			<h2></h2>

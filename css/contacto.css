@@ -13,7 +13,7 @@
 .formCont form input, textarea{
 	border: 1px var(--boton) solid;
 	color: var(--letras);
-	font-size: 1.2em;
+	font-size: 1.2ch;
 	padding-left: 5px;
 	font-family: 'Libre Baskerville', serif;
 	position: relative;
@@ -41,7 +41,7 @@
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 4px;
-	font-size: 1.2rem;
+	font-size: 1.2ch;
 	border: none;
 	background: var(--fondo);
 	width: 300px;

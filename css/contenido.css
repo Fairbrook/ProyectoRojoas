@@ -27,7 +27,7 @@
 	color: var(--letras-botones);
 	border: none;
 	padding: 7px;
-	font-size: 1em;
+	font-size: 1ch;
 }
 .grid article button:hover{
 	transform: scale(1.2,1.2);
@@ -40,7 +40,7 @@
 	font-family: 'Anton', sans-serif;
 }
 .grid .precio{
-	font-size: 1.6em;
+	font-size: 1.6ch;
 	margin-bottom: 20px;
 	font-weight: bold;
 	color: black;

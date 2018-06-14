@@ -81,6 +81,7 @@ class adminController extends \Core\controladorBase{
 	}
 
 	public function mod($id){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
 		if(!isset($id))\header("Location: ".URL."error");
 		if($_SERVER['REQUEST_METHOD']=='POST'){
 			$producto = new producto();
@@ -113,7 +114,7 @@ class adminController extends \Core\controladorBase{
 		}else{
 			$producto = new producto();
 			$producto->set("id",$id);
-			$producto->read();
+			if(!$producto->read())\header("Location: ".URL."error");
 			$categoria = new sub_categoria();
 			$categoria->set("id",$producto->get("id_categoria"));
 			$categoria->read();
@@ -129,7 +130,28 @@ class adminController extends \Core\controladorBase{
 		}
 	}
 
+	public function completado($id){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
+		$factura = new factura();
+		$factura->set("id",$id);
+		$factura->read();
+		$factura->set("estado",2);
+		$factura->update();
+		header("Location: ".URL."admin".DS."pedidos");
+	}
+
+	public function vencido($id){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
+		$factura = new factura();
+		$factura->set("id",$id);
+		$factura->read();
+		$factura->set("estado",3);
+		$factura->update();
+		header("Location: ".URL."admin".DS."pedidos");
+	}
+
 	public function pedidos(){
+		if(!isset($_SESSION['manager']))header("Location: ".URL);
 		$factura = new factura();
 		$facturas = $factura->getAll();
 		$usuarios = array();

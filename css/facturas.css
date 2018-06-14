@@ -1,0 +1,47 @@
+.facturas{
+    width: 80%;
+    margin:0 auto;
+    font-size: 1.3vw;
+}
+
+.facturas>div{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    text-align: center;
+}
+
+.facturas>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.btn-red{
+    margin: 0 auto;
+	padding: 4px;
+	font-size: 1vw;
+	border: none;
+	background: rgb(99, 57, 57);
+	width: 100%;
+	max-width: 300px;
+	display: block;
+	color: white;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+.btn-green{
+    margin: 0 auto;
+	padding: 4px;
+	font-size: 1vw;
+	border: none;
+	background: rgb(52, 107, 52);
+	width: 100%;
+	max-width: 300px;
+	display: block;
+	color: white;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}   

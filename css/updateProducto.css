@@ -25,7 +25,7 @@
     grid-template-columns: 45% 45%;
     grid-gap: 10%;
     margin-bottom: 20px;
-    font-size: 1.3em;
+    font-size: 1.3ch;
 }
 
 .update-prod > .datos >form>div{
@@ -33,8 +33,9 @@
     grid-template-columns: 45% 45%;
     grid-gap: 10%;
     margin-bottom: 20px;
-    font-size: 1.3em;
+    font-size: 1.3ch;
 }
+
 
 .update-prod > .datos > div :first-child{
     font-weight: bolder;

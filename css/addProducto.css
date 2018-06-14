@@ -15,8 +15,8 @@
 	margin-bottom: 30px;
 	align-items: center;
 }
-.add .line :not(input):not(select) {
-	font-size: 1.8em;
+.add .line {
+	font-size: 1.3vw;
 }
 .add select {
 	height: 30px;
@@ -34,9 +34,16 @@
 	min-width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+	.add .line{
+		font-size: 2vw;
+	}
+}
+
 @media screen and (max-width: 996px) {
-	.add .line {
+	.add .line{
 		grid-template-columns: 100%;
+		font-size: 3vw;
 	}
 }
 
@@ -52,5 +59,8 @@
 		grid-template-columns: 100%;
 		grid-column-gap: 0;
 		text-align: center;
+	}
+	.add .line{
+		font-size: 6vw;
 	}
 }

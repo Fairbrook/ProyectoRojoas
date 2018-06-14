@@ -1,6 +1,7 @@
 .stock{
     width: 60%;
     margin:0 auto;
+    
 }
 
 .stock>div{
@@ -18,4 +19,12 @@
 
 .stock>div>div>img{
     max-height: 100px;
+}
+
+@media screen and (max-width: 996px) {
+    .stock{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 600px) {
 }

@@ -21,7 +21,7 @@
     margin-top: 15px;
     color: rgb(61, 60, 60);
     width: 100%;
-    font-size: 1.3em;
+    font-size: 1.3vw;
     text-align: right;
     grid-gap: 10%;
 }
@@ -39,7 +39,7 @@
 .login h1{
 	color: black;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2.5vw;
 	font-family: 'Oswald', sans-serif;
 }
 

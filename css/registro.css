@@ -14,32 +14,10 @@
 	margin-top: 20px;
 }
  
-.group-registro form #btnSubmit{
-	margin: 0 auto;
-	margin-top: 20px;
-	padding: 4px;
-	font-size: 1.2em;
-	border: none;
-	background: var(--fondo);
-	width: 300px;
-	display: block;
-	color: var(--letras-botones);
-	cursor: pointer;
-}
 
-.group-registro input{
-	font-size: 1.3em;
-	color: rgb(61, 60, 60);
-	width: 100%;
-	box-sizing: border-box;
-}
 
-.group-registro form h2{
-	color: black;
-	text-align: center;
-	font-size: 2.5em;
-	font-family: 'Oswald', sans-serif;
-}
+
+
 
 .group-registro form .error{
 	display: none;

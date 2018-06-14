@@ -12,10 +12,9 @@
 
 .carrito .prod{
     display: grid;
-    grid-template-columns: 33% 33% auto;
-
+    grid-template-columns: repeat(4,25%);
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 1.8vw;
 }
 
 .carrito .total{

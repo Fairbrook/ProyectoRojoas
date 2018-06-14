@@ -1,4 +1,5 @@
-
+<div class="content-margin">
+<h2 class="h2-title">Modificar producto</h2>
 <div class="update-prod content-margin">
 	<div class="imagen">
 		<img src="<?php echo IMG.$producto->get('imagen'); ?>" alt="">
@@ -47,4 +48,5 @@
             <input type="submit" value="Actualizar" class="btn">
         </form>
     </div>
+</div>
 </div>
