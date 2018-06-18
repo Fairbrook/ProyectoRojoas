@@ -1,5 +1,5 @@
 .facturas{
-    width: 80%;
+	width: 80%;
     margin:0 auto;
     font-size: 1.3vw;
 }
@@ -50,11 +50,6 @@
 	cursor: pointer;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-}   play: block;
-	color: white;
-	cursor: pointer;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
 }
 .btn-short{
 	margin: 0 auto;
@@ -71,8 +66,9 @@
 	text-align: center;
 }   
 
-@media screen and (max-width: 600px) {
-	.facturas-5{
+@media screen and (max-width: 800px) {
+	.facturas{
 		font-size: 3vw;
+		width: 100%;
 	}
 }

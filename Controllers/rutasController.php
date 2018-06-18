@@ -141,10 +141,9 @@ class rutasController extends \Core\controladorBase{
 					"id"=>$producto->getId(),
 					"cantidad"=>$prod["cantidad"],
 					"subtotal"=>$subtotal);
-					$total+=$subtotal;
 			}
 			$factura->set("id_cliente",$_SESSION['id']);
-			$factura->set("total",$total);
+			$factura->set("total",0);
 			$factura->set("estado",1);
 			$factura->save();
 			foreach($productos as $prod){

@@ -1,7 +1,5 @@
 <div class="facturas content-margin">
-    <div>
-        <div>
-        </div>
+    <div class="column-5">
         <div>
             <h2>Total</h2>
         </div>
@@ -19,8 +17,7 @@
     </div>
     <?php $cont = -1;
      foreach($facturas as $factura): $cont++?>
-        <div>
-            <div></div>
+        <div class="column-5">
             <div><?php echo $factura->total; ?></div>
             <div><?php echo $factura->pedido; ?></div>
             <div><?php echo $factura->entrega; ?></div>
@@ -30,6 +27,8 @@
                 if($factura->estado==3)echo "Vencido";
              ?></div>
             <div class="botones">
+                <a href="<?php echo URL."factura".DS."pdf".DS.$factura->id ?>" class="btn-short" target="_blank">PDF</a>
+                <a href="<?php echo URL."factura".DS."xml".DS.$factura->id ?>" class="btn-short">XML</a>
             </div>
         </div>
     <?php endforeach ?>

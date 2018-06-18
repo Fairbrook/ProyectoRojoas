@@ -15,7 +15,7 @@
 	define('VIEW', $ruta."Views".DS);
 
 	Config\autoload::load();
-
+	if(!strpos($_GET["url"],"pdf")&&!strpos($_GET["url"],"xml"))
 	require_once "Views/template/template.php";
 	Config\enrutador::run(new Config\request());
  ?>

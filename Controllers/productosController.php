@@ -44,6 +44,7 @@ class productosController extends \Core\controladorBase
 
 	public function ver($id){
 		if($_SERVER['REQUEST_METHOD']=='POST'){
+			$producto = new producto();
 			$cookie = array();
 			if(isset($_SESSION['id']))$usuario = $_SESSION['id'];
 			else $usuario = -1;
@@ -55,11 +56,45 @@ class productosController extends \Core\controladorBase
 			foreach($aux as $prod){
 				if($prod["id"]==$id){
 					$prod["cantidad"]+=$_POST['cantidad'];
+					$producto->set("id",$id);
+					$producto->read();
+					if($prod["cantidad"]>$producto->get("cantidad")){
+						$producto = new producto();
+						$producto->set("id",$id);
+						$descuento = new descuento();
+						$descuentos = $descuento->getByProducto($id);
+			
+						if($producto->read()){
+							$this->view("productos",array(
+								"producto" => $producto,
+								"descuentos"=>$descuentos,
+								"error"=>"No hay suficientes"
+							), "ver");
+							return;
+						}
+					}
 					$flag=true;
 				}
 				$cookie[]=$prod;
 			}
 			if(!isset($flag)){
+				$producto->set("id",$id);
+				$producto->read();
+				if($_POST["cantidad"]>$producto->get("cantidad")){
+					$producto = new producto();
+					$producto->set("id",$id);
+					$descuento = new descuento();
+					$descuentos = $descuento->getByProducto($id);
+		
+					if($producto->read()){
+						$this->view("productos",array(
+							"producto" => $producto,
+							"descuentos"=>$descuentos,
+							"error"=>"No hay suficientes"
+						), "ver");
+						return;
+					}
+				}
 				$cookie[] = array("id"=>$id,"cantidad"=>$_POST['cantidad']);
 			}
 			var_dump($cookie);

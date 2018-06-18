@@ -59,5 +59,21 @@
 			$this->subtotal = $read->subtotal;
 			$this->cantidad = $read->cantidad;
 		}
+
+		public function getByFactura($id){
+			$query = $this->db()->query("SELECT * FROM {$this->table} WHERE id_fac={$id}");
+
+			if(!$this->db()->errno){
+				$result = array();
+				if ($query->num_rows > 0) {
+					while ($row=$query->fetch_object()) {
+						$result[]=$row;
+					}
+				}
+				return $result;
+
+			}else 
+				$this->getError();
+		}
 	}
  ?>

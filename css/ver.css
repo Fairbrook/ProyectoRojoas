@@ -6,6 +6,12 @@
 	width: 70%;
 }
 
+.error{
+	color: red;
+	text-align: center;
+	font-size: 3vw;
+}
+
 .producto-ver .imagen{
 	display: flex;
 	flex-flow: column;
