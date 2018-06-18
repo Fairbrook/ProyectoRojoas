@@ -9,7 +9,7 @@
 .error{
 	color: red;
 	text-align: center;
-	font-size: 3vw;
+	font-size: 1.8vw;
 }
 
 .producto-ver .imagen{
@@ -66,6 +66,9 @@
 	.producto-ver{
 		width: 95%;
 	}
+	.error{
+		font-size: 3vw;
+	}
 }
 @media screen and (max-width:710px){
 	.producto-ver{
@@ -77,5 +80,8 @@
 	.producto-ver .attrib{
 		text-align: center;
 		padding-left: 0;
+	}
+	.error{
+		font-size: 4.5vw;
 	}
 }

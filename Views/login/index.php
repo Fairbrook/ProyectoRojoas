@@ -1,5 +1,5 @@
-<div class="login">
-    <h1>Inicio de sesión</h1>
+<div class="login content-margin">
+    <h1 class="h2-title">Inicio de sesión</h1>
     <form action="<?php echo URL;?>login" method="POST">
         <?php if(isset($error)):?>
         <div class ="error">Error en el login</div>
